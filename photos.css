@@ -1,0 +1,234 @@
+.icons{
+    position:relative;
+    top:10px;
+    height:40px;
+}
+
+.icons img{
+    float:right;
+}
+
+.icons img:hover{
+    cursor:pointer;
+}
+
+.grid {
+    position:relative;
+}
+
+.grid .photo{
+    position:relative;
+    float:left;
+    width: 162px;
+    height: 162px;
+    margin:10px;
+}
+
+
+
+.grid .photo img , .list .photo img{
+    position:absolute;
+    top:0px;
+    left:0px;
+    background-color: white;
+    padding: 5px;
+    border:1px solid lightgray;
+    width: 150px;
+    height: 150px;
+}
+
+.grid .description{
+    position:absolute;
+    left:6px;
+    bottom:6px;
+    height:35px;
+    width:150px;
+    background-color:rgba(0,0,0,0.3);
+    color:white;
+    line-height: 35px;
+    text-align: center;
+}
+
+.grid .date{
+    display:none;
+    background-color:yellow;
+}
+
+.list {
+    position:relative;
+}
+
+.list .photo{
+    position:relative;
+    display:block;
+    width:70%;
+    height:170px;
+    padding:10px;
+    border-bottom:lightgray 1px dotted;
+}
+
+.list div.description, .list .date{
+    position:absolute;
+    top:10px;
+    color: black;
+    left:250px;
+    font-size:25px;
+}
+
+.list .date{
+    top:100px;
+    color:gray;
+    font-size:15px;  
+}
+
+
+
+
+
+/*THIS IS FOR THE LAYOUT AT THE TOP (ICON,TITLE, SEARCH BAR)*/
+input.text{
+    color:gray;
+    border-width:1px;
+    border-color: lightgray;
+    border-style: solid;
+    width: 470px;
+    height: 30px;
+    padding: 5px;
+
+}
+
+div.suggestions{
+    position:absolute;
+    top:50px;
+    z-index:50;
+    border-color:lightgray;
+    background-color:white;
+    border-style:solid;
+    border-width: 1px;
+    width:470px;
+    padding: 5px;
+    overflow:auto;
+    display:none;
+}
+
+div.sub_suggestions{
+    width:470px;
+        padding: 5px;
+
+}
+
+div.sub_suggestions:hover{
+    background-color:#f5f5f5;
+        padding: 5px;
+
+}
+.button {
+    background-color: #00A0E5;
+    border: none;
+    color: white;
+    padding: 1px 3px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    height: 30px;
+}
+
+.shadedBox {
+    width: 82%;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    border:1px solid #D5D5D5;
+    background-color:#F5F5F5;
+}
+
+.Table{
+    display: table;
+    width: 82%;
+}
+.Table2{
+    display: table;
+}
+.TableRow {
+    display: table-row;
+}
+.TableHeading {
+    background-color: #EEE;
+    display: table-header-group;
+}
+.TableCell_movie_icon{
+    display: table-cell;
+    padding: 5px 5px;
+    width: 4%;
+    color: white;
+}
+
+.TableCell, .TableHead {
+    display: table-cell;
+    padding: 0px 10px;
+}
+
+.TableCell_pic {
+    display: table-cell;
+    padding: 5px 5px;
+    height: 205px;
+}
+
+.TableCell_title {
+    display: table-cell;
+    padding: 5px 5px;
+    vertical-align:middle;
+}
+
+.TableCell_search {
+    display: table-cell;
+    padding: 5px 5px;
+    vertical-align:middle;
+}
+
+.TableCell_news {
+    display: table-cell;
+    padding: 5px 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.TableCell_date {
+    display: table-cell;
+    padding: 5px 5px;
+    font-size: 13px;
+    color: grey;
+}
+
+.TableCell_details {
+    display: table-cell;
+    padding: 5px 5px;
+    font-size: 17px;
+    line-height: 1.4;
+}
+.TableHeading {
+    background-color: #EEE;
+    display: table-header-group;
+    font-weight: bold;
+}
+.TableFoot {
+    background-color: #EEE;
+    display: table-footer-group;
+    font-weight: bold;
+}
+.TableBody {
+    display: table-row-group;
+}
+
+/*THIS IS FOR THE FONT FOR THE TITLE*/
+@font-face {
+    font-family: "oleo";
+    src: url(fonts/Oleo.woff);
+        }
+
+h1, h2 {
+    font-family:oleo;
+}

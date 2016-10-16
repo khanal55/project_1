@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rent a Movie</title>
+        <meta charset="UTF-8">
+        <link rel="stylesheet" type="text/css" href="photos.css">
+
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+        <script src="script/script.js"></script>
+        <script id="photo-template" type="text/html">
+        <div class='photo'>
+            <img src='{{path}}'>
+            <div class='description'>{{description}}</div>
+            <div class='date'>{{date}}</div>    
+        </div> 
+    </script>
+    <script src="htmlMaker.js"></script>
+    <script src="movies.js"></script>
+    <script src="photos.js"></script>
+
+</head>
+<body>
+    <div class="Table">
+        <div class="TableBody">
+            <div class="TableRow">
+                <div class="shadedBox">
+
+                    <div class="TableCell_movie_icon">
+                        <img src="images/movie.png" height="60">
+                    </div>
+
+                    <div class="TableCell_title">
+                       <!-- ALL H1 AND H2 TAGS ARE IN OLEO VIA PHOTO.CSS CODE-->
+                       <h2>RENT A MOVIE</h2> 
+                       
+                    </div>
+
+                    <div class="TableCell_search">
+                        <input class="text" id="field" type="text" placeholder="Search for movies here">
+                        <button id="search_button" class="button"> Search </button>
+                        <div id="suggestions_box" class="suggestions"></div>
+
+                    </div>
+                </div>   
+            </div>
+        </div>
+    </div>
+
+    <!--                        This is for the sorting and layout-->
+    <div class="icons">
+        <select id="combo_box">
+            <option>description</option>
+            <option>date</option>
+        </select>
+        <img id="list_icon" title="list" src="images/list.jpg">
+        <img id="grid_icon" title="grid" src="images/grid_pressed.jpg">
+    </div>
+    <div id="photos" class="grid">
+    </div>
+
+
+
+</body>
+</html>
+
