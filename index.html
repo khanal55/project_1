@@ -1,31 +1,27 @@
 <!DOCTYPE html>
-<!--
-To change this license header, choose License Headers in Project Properties.
-To change this template file, choose Tools | Templates
-and open the template in the editor.
--->
-<!DOCTYPE html>
 <html>
     <head>
-        <title>Rent a Movie</title>
+        <title>Movies</title>
         <meta charset="UTF-8">
         <link rel="stylesheet" type="text/css" href="photos.css">
-
-        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-        <script src="script/script.js"></script>
         <script id="photo-template" type="text/html">
         <div class='photo'>
-            <img src='{{path}}'>
+            <img src='{{photo}}'>
+            <div class="title" >{{title}}</div>
+            <div class='year'>({{year}})</div>  
+            <div class='starring' ><span font-weight:bold>Starring:</span> {{starring}}</div>
+            <div class='rating' >Rating:{{rating}}</div>           
             <div class='description'>{{description}}</div>
-            <div class='date'>{{date}}</div>    
+            <div class='HD'> </div>
         </div> 
     </script>
-    <script src="htmlMaker.js"></script>
-    <script src="movies.js"></script>
-    <script src="photos.js"></script>
-
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="scripts/htmlMaker.js"></script>
+    <script src="scripts/data.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/photos.js"></script>
 </head>
-<body>
+<body>     
     <div class="Table">
         <div class="TableBody">
             <div class="TableRow">
@@ -36,9 +32,9 @@ and open the template in the editor.
                     </div>
 
                     <div class="TableCell_title">
-                       <!-- ALL H1 AND H2 TAGS ARE IN OLEO VIA PHOTO.CSS CODE-->
-                       <h2>RENT A MOVIE</h2> 
-                       
+                        <!-- ALL H1 AND H2 TAGS ARE IN OLEO VIA PHOTO.CSS CODE-->
+                        <h2>RENT A MOVIE</h2> 
+
                     </div>
 
                     <div class="TableCell_search">
@@ -51,21 +47,16 @@ and open the template in the editor.
             </div>
         </div>
     </div>
-
-    <!--                        This is for the sorting and layout-->
-    <div class="icons">
+    <div class="icons">Short By:
         <select id="combo_box">
-            <option>description</option>
-            <option>date</option>
+            <option>Rating</option>
+            <option>Year</option>
         </select>
         <img id="list_icon" title="list" src="images/list.jpg">
         <img id="grid_icon" title="grid" src="images/grid_pressed.jpg">
     </div>
+    <hr>
     <div id="photos" class="grid">
     </div>
-
-
-
 </body>
 </html>
-
